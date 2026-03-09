@@ -60,8 +60,12 @@ Para facilitar os testes da API, uma collection do Postman foi incluída no proj
 Arquivo:
 orders-api-postman-collection.json
 
+<<<<<<< HEAD
 Importe este arquivo no Postman para acessar todos os endpoints da API.
 
 ## Variáveis de Ambiente
 
 Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`.
+=======
+Importe este arquivo no Postman para acessar todos os endpoints da API.
+>>>>>>> a5ed38fb7e01be022a1ce7807384feb3089c82ad

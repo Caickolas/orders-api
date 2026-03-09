@@ -7,6 +7,7 @@
   },
   "item": [
     {
+<<<<<<< HEAD
       "name": "Order",
       "item": [
         {
@@ -261,6 +262,123 @@
     {
       "key": "token",
       "value": ""
+=======
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"numeroPedido\": \"v10089016vdb\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    {\r\n      \"idItem\": \"2434\",\r\n      \"quantidadeItem\": 1,\r\n      \"valorItem\": 1000\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/order",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Order By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/order/v10089016vdb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order",
+            "v10089016vdb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/order/list",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Order",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"numeroPedido\": \"v10089015vdb-01\",\r\n  \"valorTotal\": 12000,\r\n  \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    {\r\n      \"idItem\": \"2434\",\r\n      \"quantidadeItem\": 2,\r\n      \"valorItem\": 1000\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/order/v10089016vdb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order",
+            "v10089016vdb"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/order/v10089016vdb",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order",
+            "v10089016vdb"
+          ]
+        }
+      },
+      "response": []
+>>>>>>> a5ed38fb7e01be022a1ce7807384feb3089c82ad
     }
   ]
 }
