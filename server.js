@@ -1,22 +1,27 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
+
 const orderRoutes = require("./routes/orderRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
-const PORT = 3000;
 
 app.use(express.json());
 
-mongoose
-  .connect("mongodb://127.0.0.1:27017/ordersDB")
-  .then(() => {
-    console.log("MongoDB conectado");
-    app.listen(PORT, () => {
-      console.log(`Servidor rodando na porta ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Erro ao conectar no MongoDB:", error.message);
+app.use(authRoutes);
+app.use(orderRoutes);
+
+mongoose.connect(process.env.MONGO_URL)
+.then(() => {
+  console.log("MongoDB conectado");
+
+  app.listen(process.env.PORT, () => {
+    console.log(`Servidor rodando na porta ${process.env.PORT}`);
   });
 
-app.use(orderRoutes);
+})
+.catch((error) => {
+  console.error(error);
+});
